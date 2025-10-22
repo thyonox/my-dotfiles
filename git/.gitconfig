@@ -1,0 +1,15 @@
+[user]
+	name = thyonox
+	email = thyonox@gmail.com
+[credential]
+	helper = store
+[credential "https://github.com/thyonox"]
+  username = thyonox
+[credential "https://github.com/thyonix"]
+  username = thyonix
+[http]
+	proxy = http://127.0.0.1:10808
+[https]
+	proxy = https://127.0.0.1:10808
+[core]
+	autocrlf = input
