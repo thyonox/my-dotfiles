@@ -1,0 +1,337 @@
+{
+    // window configuration============================================================================================================================================
+    "window.restoreWindows": "none", // 关闭自定义标题栏
+    // workbench configuration====================================================================================================================================
+    "workbench.colorTheme": "Aura Dracula Spirit (Soft)", // 主题
+    "workbench.activityBar.location": "default", // 隐藏侧边栏
+    "workbench.editor.showTabs": "multiple", // 只显示一个标签页
+    "workbench.startupEditor": "none", // 在没有恢复项目的情况下不打开编辑器
+    "workbench.tips.enabled": false, // 隐藏标签文件的地址信息                                                    
+    "workbench.tree.indent": 20, // 文件树缩进,
+    "workbench.sideBar.location": "left", // 侧边栏位置
+    "workbench.iconTheme": "material-icon-theme", // 图标主题
+    "workbench.tree.enableStickyScroll": false, // 不对文件树上层目录固定
+    "workbench.tree.renderIndentGuides": "none", // 文件数参考线
+    "breadcrumbs.enabled": false, // 关闭导航路径
+    // file configuration===================
+    "files.autoSave": "afterDelay", // 自动保存
+    // security configuration===================================================================================================================================="default"
+    "security.workspace.trust.untrustedFiles": "open", // 打开不受信任文件而不提示
+    "security.workspace.trust.banner": "never", // 打开不受信任项目时，不显示受限模式横幅
+    // editor configuration========================================================================================================================================
+    "editor.fontLigatures": false,
+    "editor.mouseWheelZoom": true, // 鼠标滚轮缩放
+    "editor.fontFamily": "'Comic Mono'", // 字体
+    "editor.fontWeight": "400", // 字体粗细
+    "editor.minimap.enabled": false, // 关闭迷你地图
+    "editor.stickyScroll.enabled": false,
+    "editor.lineHeight": 1.7, // 编辑器行距
+    "editor.tabSize": 4,
+    "editor.cursorBlinking": "expand", // 光标样式
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.overviewRulerBorder": false,
+    // explorer configuration
+    "explorer.confirmDelete": false, // 删除文件时不确认
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false, // 单个文件夹不被压缩
+    "explorer.decorations.badges": false, // 关闭文件状态徽章
+    // git configuration
+    "git.openRepositoryInParentFolders": "always",
+    "git.autofetch": true, // 自动从远程仓库抓取提交
+    "git.confirmSync": false, // 同步之前确认
+    "git.decorations.enabled": false, // git文件颜色状态关闭
+    // material-icon-theme plugin configuration
+    "material-icon-theme.hidesExplorerArrows": true, // 去掉文件树的箭头
+    "editor.hideCursorInOverviewRuler": true,
+    // custom ui plugin configuration
+    // vim plugin configuratio===================================================================================================================================================================
+    "vim.easymotion": true,
+    "vim.sneak": false,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    // input mode keybindings
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "<C-e>"
+            ],
+            "commands": [
+                "workbench.action.quickOpen",
+            ]
+        }
+    ],
+    // normal mode keybindings
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            // delte row
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        //    
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            // newline
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "lineBreakInsert"
+            ],
+            "silent": true
+        },
+        {
+            // format document
+            "before": [
+                "f",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            // 重命名符号
+            "before": [
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            // switch to the left tab
+            "before": [
+                "s",
+                "h"
+            ],
+            "after": [
+                "g",
+                "T"
+            ]
+        },
+        {
+            // switch to the right tab
+            "before": [
+                "s",
+                "l"
+            ],
+            "after": [
+                "g",
+                "t"
+            ]
+        },
+        {
+            // open current tab in new side view
+            "before": [
+                "s",
+                "n"
+            ],
+            "after": [
+                "<C-w>",
+                "v"
+            ]
+        },
+        {
+            // g + d open definition in side view
+            "before": [
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.revealDefinitionAside"
+            ]
+        },
+        {
+            // g + i open implementation in side view
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "workbench.action.splitEditor",
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            // g + t open type definition in side view
+            "before": [
+                "g",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.splitEditor",
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            // close current tab
+            "before": [
+                "s",
+                "c"
+            ],
+            "after": [
+                "e<C-w>",
+                "c"
+            ]
+        },
+        {
+            // switch between editor groups/views 
+            "before": [
+                "s",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.navigateEditorGroups"
+            ]
+        },
+        {
+            // start the zen mode
+            "before": [
+                "z",
+                "z"
+            ],
+            "commands": [
+                "workbench.action.toggleZenMode"
+            ]
+        },
+    ],
+    // vim leader configuration
+    "vim.leader": "<space>",
+    // handle
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-c>": false,
+        "<C-b>": false,
+        "<C-0>": false,
+        "<C-p>": false
+    },
+    // ===================================================================================================================================================================================================
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "liveServer.settings.donotVerifyTags": true,
+    "animations.Install-Method": "Custom UI Style",
+    "custom-ui-style.external.imports": [
+        "file:///c:/Users/Thyonix/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    ],
+    "animations.CursorAnimation": true,
+    "animations.CursorAnimationOptions": {
+        "Color": "#7256C5",
+        "TrailLength": 8
+    },
+    "workbench.editor.tabSizing": "shrink",
+    "remote.SSH.remotePlatform": {
+        "74.211.104.95": "linux"
+    },
+    "animations.UseCursorColorForCursorAnimation": true,
+    "liveServer.settings.ignoreFiles": [
+        "server/**",
+        "**/*.log",
+        "**/*.tmp"
+    ],
+    "projectManager.tags": [
+        "Personal",
+        "Work",
+        "Learning"
+    ],
+    "terminal.integrated.env.windows": {}, // JDK主文件路径
+    "maven.terminal.useJavaHome": true, // 指定maven可执行文件路径
+    "maven.executable.preferMavenWrapper": false, // 指定maven的配置文件
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "D:\\Development\\JDK\\21\\jdk-21.0.6"
+        }
+    ],
+    "java.configuration.maven.userSettings": "D:\\Development\\Maven\\apache-maven-3.9.9\\conf\\settings.xml",
+    "java.configuration.maven.globalSettings": "D:\\Development\\Maven\\apache-maven-3.9.9\\conf\\settings.xml",
+    "maven.pomfile.autoUpdateEffectivePOM": true,
+    "editor.accessibilitySupport": "on",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.suggest.localityBonus": true,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        },
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "redhat.telemetry.enabled": true,
+}
